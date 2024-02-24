@@ -28,5 +28,3 @@ El archivo CSS que proporciona estilos y diseño a la interfaz del usuario. Aqu�
 ## Personalización
 
 Si deseas personalizar la apariencia o la funcionalidad, puedes modificar el archivo `style.css` para cambiar los estilos y ajustar el código JavaScript en `home.js` para agregar nuevas funciones o mejorar las existentes.
-
-¡Disfruta utilizando el Sistema de Control de Inventario!

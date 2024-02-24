@@ -61,7 +61,6 @@ function realizarBusqueda() {
 // Mostrar la Opcion de MODIFICAR, bajo Contraseña
 (function() {
     var claveIngreso = 11910510810810597109;
-
     function modificar() {
         var clave = prompt("Ingrese la contraseña de Acceso:");
         Acceso = converterText(clave)
@@ -113,12 +112,10 @@ function mostrarInventario() {
     inventarioSection.style.display = inventarioSection.style.display === "none" ? "block" : "none";
     var tablaElementosSection = document.getElementById("tablaElementos");
     tablaElementosSection.style.display = "block";
-
     // Llenar tabla de elementos
     var tablaBody = document.getElementById("tablaBodyElementos");
     tablaBody.innerHTML = ""; // Limpiar contenido previo
     var elementosGuardados = JSON.parse(localStorage.getItem('elementos')) || [];
-
     //Ordenar
     elementosGuardados.sort(function(a, b) {
         var codigoA = a.codigo.toLowerCase();
@@ -137,8 +134,6 @@ function mostrarInventario() {
             }
         }
     });
-    
-
     elementosGuardados.forEach(function (elemento) {
     var row = tablaBody.insertRow();
     var cellCodigo = row.insertCell(0);
@@ -153,9 +148,7 @@ function updateElemento() {
     var codigo = document.getElementById("codigoUpdate").value;
     var nuevaDescripcion = document.getElementById("nuevaDescripcion").value;
     var nuevoPrecio = document.getElementById("nuevoPrecio").value;
-
     var elementosGuardados = JSON.parse(localStorage.getItem('elementos')) || [];
-
     // BUSCAR 
     var indice = -1;
     for (var i = 0; i < elementosGuardados.length; i++) {
@@ -164,15 +157,12 @@ function updateElemento() {
             break;
         }
     }
-
     // ACTUALIZAR el elemento
     if (indice !== -1) {
         elementosGuardados[indice].descripcion = nuevaDescripcion;
         elementosGuardados[indice].precio = nuevoPrecio;
-
         // Actualizar el array
         localStorage.setItem('elementos', JSON.stringify(elementosGuardados));
-
         console.log('Elemento actualizado:', elementosGuardados[indice]);
     } else {
         console.log('Elemento no encontrado:', codigo);
@@ -181,7 +171,6 @@ function updateElemento() {
 function deleteElemento() {
     var codigo = document.getElementById("codigoDelete").value;
     var elementosGuardados = JSON.parse(localStorage.getItem('elementos')) || [];
-
     // BUSCAR 
     var indice = -1;
     for (var i = 0; i < elementosGuardados.length; i++) {
@@ -193,10 +182,8 @@ function deleteElemento() {
     // ELIMINAR el elemento
     if (indice !== -1) {
         elementosGuardados.splice(indice, 1);
-
         // Actualizar el array
         localStorage.setItem('elementos', JSON.stringify(elementosGuardados));
-
         console.log('Elemento eliminado:', codigo);
     } else {
         console.log('Elemento no encontrado:', codigo);
