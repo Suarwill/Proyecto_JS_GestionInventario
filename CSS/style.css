@@ -1,0 +1,161 @@
+body {
+    height: 600px;
+    background-image: url("../IMG/fondopagina.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-top: 80px;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: rgb(0, 0, 255, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 rgb(0, 0, 255, 0.5);
+    justify-content: center
+    
+}
+    header * {
+    display: inline;
+}      
+    header li {
+    margin: 20px;
+}       
+    header li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#boxCentrado {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 10px;
+}
+
+/* Diseño de la Sección de BIENVENIDA*/
+#bienvenida {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: darkblue;
+    text-shadow: 3px 3px 3px rgba(19, 31, 46, 0.5) ;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s ease-out forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.img{
+    height: 300px;
+    width:  700px;
+}
+.imgBuscador{
+    height: 200px;
+    width:  200px;
+    scale: 50%;
+}
+
+/* Diseño de la Sección de NOSOTROS*/
+#nosotros {
+    position: fixed;
+    text-align: center; 
+    height: 30vh;
+    width: 50rem;
+    border-radius: 3vh;
+    box-shadow: inset 3px 3px 5px gray, inset -2px -2px 5px gray, 2px 2px 10px gray;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.85rem;
+    background: linear-gradient(blue, rgba(32, 32, 153, 0.85));
+    text-shadow: 10px;
+}
+/* Diseño de la seccion de DATOS*/
+#modificador {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    display: none ;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 10px;
+}
+#boxDatos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(7, 2, 75);
+    text-shadow: 10px;
+}
+#boxModificador{
+    width: 33%;
+    height: 15rem;
+    align-content: center;
+    font-size: 0.85rem;
+    background: rgba(0, 0, 255, 0.5);   
+    border-radius: 5px;
+}
+#boxModificador h4{
+    text-align: center;
+}
+u{
+    color: rgb(94, 1, 1);
+}
+#import-export {
+    height: 100px; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.boton{
+    text-align : center;
+}
+.enLinea {
+    display: inline-block;
+}
+
+/* Diseño de la TABLA de inventarios*/
+#tablaElementos {
+    margin-top: 20px;
+}
+#tablaElementos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+#tablaElementos th, #tablaElementos td {
+    background-color: rgba(178, 236, 238, 0.212);
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+#tablaElementos th {
+    background-color: darkcyan;
+}

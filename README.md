@@ -1,1 +1,0 @@
-# ProyectoJS_GestionInventario
