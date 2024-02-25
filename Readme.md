@@ -1,6 +1,7 @@
 # Sistema de Control de Inventario
 
 Este es un simple sistema de control de inventario desarrollado utilizando HTML y CSS para la estructura y estilo, respectivamente. El sistema cuenta con una interfaz dividida en secciones, permitiendo al usuario realizar diversas operaciones relacionadas con la gestión de inventario.
+Todo se guarda en LocalStorage.
 
 ## Archivos Principales
 
