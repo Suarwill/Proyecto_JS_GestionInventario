@@ -31,102 +31,104 @@
             </ul>
         </nav>
     </header>
-    <div class="text" id="bienvenida" style="display:none;" >
-        <h1>Bienvenido al Control de Inventario</h1>
-        <p>Optimizado para tu gestión. Mantén un control preciso de tu inventario de manera sencilla y eficiente.</p>
-        <img src="IMG/Inventario.png"/ class="img">
-    </div>
-    <div class="text" id="buscador" style="display:none;" >
-        <div class="text" id="boxCentrado">
+        <section>
+        <div class="text" id="bienvenida" style="display:none;" >
+            <h1>Bienvenido al Control de Inventario</h1>
+            <p>Optimizado para tu gestión. Mantén un control preciso de tu inventario de manera sencilla y eficiente.</p>
+            <img src="IMG/Inventario.png"/ class="img" position="center">
+        </div>
+        <div class="text" id="buscador" style="display:none;" >
+            <div class="text" id="boxCentrado">
 
-            <form id="formularioBusqueda">
-                <label for="palabraClave">Buscar Elemento:</label>
-                <input type="text" id="palabraClave" name="palabraClave" required>
-                <button type="button" class="boton" onclick="realizarBusqueda()">Buscar</button>
-            </form>
-            
-            <div id="resultadosBusqueda"></div>
-            <img src="IMG/buscador.png"/ class="imgBuscador">
-            <h4>Recuerda que los resultados solo están almacenados en este dispositivo.</h4>
-        </div>
-    </div>
-    <div id="inventario" style="display:none;">
-        <div id="tablaElementos" style="display:none;">
-            <h2>Elementos Guardados</h2>
-            <table id="tablaElementos">
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody id="tablaBodyElementos"></tbody>
-            </table>
-        </div>
-    </div>
-    <div id="modificador" style="display:none;" >
-        <div id="boxDatos">
-            <!-- Protegido con contraseña -->
-            <div id="boxModificador">
-                <h4> Sección para <u>Crear</u> elemento en el listado</h4>
-                <form id="formularioInventario">
-                    <label for="codigo">Código:</label>
-                    <input type="number" id="codigo" name="codigo" required>
-                <br>
-                    <label for="descripcion">Descripción:</label>
-                    <input type="text" id="descripcion" name="descripcion" required>
-                <br>
-                    <label for="precio">Precio:</label>
-                    <input type="text" id="precio" name="precio" required>
-                <br>
-                <br>
-                    <button type="button" class="boton" onclick="createElemento()">Agregar Elemento</button>
+                <form id="formularioBusqueda">
+                    <label for="palabraClave">Buscar Elemento:</label>
+                    <input type="text" id="palabraClave" name="palabraClave" required>
+                    <button type="button" class="boton" onclick="realizarBusqueda()">Buscar</button>
                 </form>
+                
+                <div id="resultadosBusqueda"></div>
+                <img src="IMG/buscador.png"/ class="imgBuscador">
+                <h4>Recuerda que los resultados solo están almacenados en este dispositivo.</h4>
             </div>
-            <div id="boxModificador">
-                <h4>Sección para <u>Actualizar</u> un elemento existente en el inventario</h4>
-                <form id="formularioInventario">
-                    <label for="codigoUpdate">Código a Modificar:</label>
-                    <input type="text" id="codigoUpdate" name="codigoUpdate" required>
-                <br>
-                    <label for="nuevaDescripcion">Nueva Descripción:</label>
-                    <input type="text" id="nuevaDescripcion" name="nuevaDescripción" required>
-                <br>
-                    <label for="nuevoPrecio">Nuevo Precio:</label>
-                    <input type="text" id="nuevoPrecio" name="nuevoPrecio" required>
-                <br>
-                <br>
-                    <button type="button" class="boton" onclick="updateElemento()">Actualizar Elemento</button>
-                </form>
+        </div>
+        <div id="inventario" style="display:none;">
+            <div id="tablaElementos" style="display:none;">
+                <h2>Elementos Guardados</h2>
+                <table id="tablaElementos">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaBodyElementos"></tbody>
+                </table>
             </div>
-            <div id="boxModificador">
-                <h4>Sección para <u>Eliminar</u> un elemento del inventario</h4>
-                <form id="form-Eliminar">
-                    <label for="codigoDelete">Código:</label>
-                    <input type="text" id="codigo" name="codigo" required>
+        </div>
+        <div id="modificador" style="display:none;" >
+            <div id="boxDatos">
+                <!-- Protegido con contraseña -->
+                <div id="boxModificador">
+                    <h4> Sección para <u>Crear</u> elemento en el listado</h4>
+                    <form id="formularioInventario">
+                        <label for="codigo">Código:</label>
+                        <input type="number" id="codigo" name="codigo" required>
+                    <br>
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" id="descripcion" name="descripcion" required>
+                    <br>
+                        <label for="precio">Precio:</label>
+                        <input type="text" id="precio" name="precio" required>
+                    <br>
+                    <br>
+                        <button type="button" class="boton" onclick="createElemento()">Agregar Elemento</button>
+                    </form>
+                </div>
+                <div id="boxModificador">
+                    <h4>Sección para <u>Actualizar</u> un elemento existente en el inventario</h4>
+                    <form id="formularioInventario">
+                        <label for="codigoUpdate">Código a Modificar:</label>
+                        <input type="text" id="codigoUpdate" name="codigoUpdate" required>
+                    <br>
+                        <label for="nuevaDescripcion">Nueva Descripción:</label>
+                        <input type="text" id="nuevaDescripcion" name="nuevaDescripción" required>
+                    <br>
+                        <label for="nuevoPrecio">Nuevo Precio:</label>
+                        <input type="text" id="nuevoPrecio" name="nuevoPrecio" required>
+                    <br>
+                    <br>
+                        <button type="button" class="boton" onclick="updateElemento()">Actualizar Elemento</button>
+                    </form>
+                </div>
+                <div id="boxModificador">
+                    <h4>Sección para <u>Eliminar</u> un elemento del inventario</h4>
+                    <form id="form-Eliminar">
+                        <label for="codigoDelete">Código:</label>
+                        <input type="text" id="codigo" name="codigo" required>
+                    <br>
+                    <br>
+                        <button type="button" class="boton" onclick="deleteElemento()">Eliminar Elemento</button>
+                    </form>
+                </div>
                 <br>
-                <br>
-                    <button type="button" class="boton" onclick="deleteElemento()">Eliminar Elemento</button>
-                </form>
             </div>
             <br>
-        </div>
-        <br>
-        <div id="import-export">
-            <div class="enLinea">
-                <h4> Sección de <u>Exportación e Importación</u> de Datos</h4>
-                <button type="button" class="boton" onclick="exportarDatosComoJSON()">Exportar Datos</button>
-                <button type="button" class="boton" onclick="seleccionarArchivo()">Importar Archivo</button>
-                <input type="file" id="inputArchivo" style="display: none" onchange="importarDatosDesdeJSON(this)">
+            <div id="import-export">
+                <div class="enLinea">
+                    <h4> Sección de <u>Exportación e Importación</u> de Datos</h4>
+                    <button type="button" class="boton" onclick="exportarDatosComoJSON()">Exportar Datos</button>
+                    <button type="button" class="boton" onclick="seleccionarArchivo()">Importar Archivo</button>
+                    <input type="file" id="inputArchivo" style="display: none" onchange="importarDatosDesdeJSON(this)">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="text" id="nosotros" style="display:none;" >
-        <h4>Descubre más sobre nosotros</h4>
-        <h1>Construyendo el Futuro</h1>
-        <h3>Estamos trabajando arduamente para ofrecerte la mejor experiencia en el control de inventario. <br>¡Acompáñanos en este viaje!</h3>    
-    </div>
+        <div class="text" id="nosotros" style="display:none;" >
+            <h4>Descubre más sobre nosotros</h4>
+            <h1>Construyendo el Futuro</h1>
+            <h3>Estamos trabajando arduamente para ofrecerte la mejor experiencia en el control de inventario. <br>¡Acompáñanos en este viaje!</h3>    
+        </div>
+    </section>    
 </body>
 
 </html>
